@@ -10,6 +10,10 @@ include(FetchContent)
 
 set(FETCHCONTENT_QUIET OFF)
 
+set(SOBJECTIZER_BUILD_SHARED ON CACHE INTERNAL "")
+set(SOBJECTIZER_BUILD_STATIC ON CACHE INTERNAL "")
+set(SOBJECTIZER_INSTALL ON CACHE INTERNAL "")
+
 FetchContent_Declare(sobjectizer
 	GIT_REPOSITORY https://github.com/stiffstream/sobjectizer
 	GIT_TAG v.5.7.4.1
@@ -22,8 +26,5 @@ FetchContent_Declare(sobjectizer
 )
 
 FetchContent_MakeAvailable(sobjectizer)
-
-set(SOBJECTIZER_BUILD_SHARED OFF CACHE INTERNAL "")
-set(SOBJECTIZER_BUILD_STATIC  ON CACHE INTERNAL "")
 
 add_subdirectory(hello_world)
